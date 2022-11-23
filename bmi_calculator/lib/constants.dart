@@ -42,10 +42,10 @@ const Map<String, String> bmi_range_number = {
 };
 
 const Map<String, Color> bmi_range_color = {
-  "underweight": Colors.blue,
-  "normal": Colors.green,
-  "overweight": Colors.yellow,
-  "obese": Colors.orange,
+  "underweight":    Colors.blue,
+  "normal":         Colors.green,
+  "overweight":     Colors.yellow,
+  "obese":          Colors.orange,
   "extremly obese": Colors.red,
 };
 
