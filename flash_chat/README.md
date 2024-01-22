@@ -1,6 +1,5 @@
 # flash_chat
-
-A new Flutter project.
+This is an advanced tutorial app on how to use firebase and integrate it.
 
 ## Getting Started
 
