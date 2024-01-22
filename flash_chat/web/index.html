@@ -34,44 +34,26 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    const serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <!-- Firebase integration :  -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
         }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
       });
     });
-  </script>
-
-  <!-- Firebase Configuration -->
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyC0mL72eXCDPOvOW-q8i4-snwhpX60m5WQ",
-      authDomain: "flash-chat-3bf55.firebaseapp.com",
-      projectId: "flash-chat-3bf55",
-      storageBucket: "flash-chat-3bf55.appspot.com",
-      messagingSenderId: "747216190514",
-      appId: "1:747216190514:web:3a65833fcded946260502b",
-      measurementId: "G-5S425RXKQV"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
   </script>
 </body>
 </html>
